@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CityCare Multi-Specialty Hospital — Medical Services, Specialist Doctors, and Online Patient Appointment Booking">
+  <title>CityCare Multi-Specialty Hospital | Patient Portal</title>
+  <link rel="stylesheet" href="labexp2.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <h1>CityCare Multi-Specialty Hospital</h1>
+      <nav aria-label="Primary Navigation">
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Book Appointment</a>
+        <a href="#helpline">Emergency Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <div class="main-grid">
+      <div class="primary-column">
+        <!-- Section 1: Hospital Services -->
+        <section id="services" aria-labelledby="services-heading">
+          <h2 id="services-heading">Hospital Services</h2>
+          <p class="section-subtitle">Comprehensive clinical departments equipped with modern diagnostic facilities.</p>
+
+          <article class="info-card">
+            <span class="badge">Critical Care</span>
+            <h3>24/7 Emergency &amp; Trauma Care</h3>
+            <p>Immediate critical care with advanced life-support ambulances and dedicated trauma specialists available round the clock.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="badge">Heart Center</span>
+            <h3>Cardiology &amp; Vascular Sciences</h3>
+            <p>Non-invasive ECG, 2D echocardiography, interventional angioplasty, and preventive cardiac rehabilitation programs.</p>
+          </article>
+        </section>
+
+        <!-- Section 2: Specialist Doctors -->
+        <section id="doctors" aria-labelledby="doctors-heading">
+          <h2 id="doctors-heading">Our Specialists</h2>
+          <p class="section-subtitle">Consult experienced board-certified physicians across key specialties.</p>
+
+          <article class="info-card">
+            <h3>Dr. Ananya Rao &mdash; Senior Cardiologist</h3>
+            <p><strong>Qualifications:</strong> MD, DM (Cardiology) &bull; 14 Years Experience</p>
+            <p><strong>OPD Schedule:</strong> Monday &ndash; Friday, 10:00 AM &ndash; 4:00 PM</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Dr. Vikram Menon &mdash; Orthopedic Surgeon</h3>
+            <p><strong>Qualifications:</strong> MS (Orthopedics) &bull; 11 Years Experience</p>
+            <p><strong>OPD Schedule:</strong> Tuesday &ndash; Saturday, 11:00 AM &ndash; 5:00 PM</p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Sidebar: Emergency & OPD Notice -->
+      <aside id="helpline" aria-labelledby="helpline-heading">
+        <h2 id="helpline-heading">Emergency &amp; OPD Desk</h2>
+        <div class="aside-item">
+          <strong>24/7 Ambulance Helpline</strong>
+          <p>Call <a href="tel:+9118001029999">1800-102-9999</a> for immediate emergency dispatch.</p>
+        </div>
+        <div class="aside-item">
+          <strong>Outpatient Timings</strong>
+          <p>Monday &ndash; Saturday: 9:00 AM to 6:00 PM (Sunday Emergency Only).</p>
+        </div>
+        <div class="aside-item">
+          <strong>Insurance &amp; Cashless Desk</strong>
+          <p>Ground Floor, Block A &bull; <a href="mailto:care@citycarehospital.org">care@citycarehospital.org</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Section 3: Accessible Patient Appointment Form -->
+    <section id="appointment" class="form-section" aria-labelledby="form-heading">
+      <div class="form-container">
+        <h2 id="form-heading">Book a Patient Appointment</h2>
+        <p class="section-subtitle">All fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required. Fully accessible via keyboard navigation.</p>
+
+        <form action="#" method="POST">
+          <div class="form-row">
+            <div class="field">
+              <label for="patientName">Patient Full Name *</label>
+              <input type="text" id="patientName" name="patientName" placeholder="e.g., Aarav Sharma" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Mobile Number (10 digits) *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" pattern="[0-9]{10}" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="aarav@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="department">Medical Department *</label>
+              <select id="department" name="department" required>
+                <option value="">-- Select a Department --</option>
+                <option value="cardiology">Cardiology (Dr. Ananya Rao)</option>
+                <option value="orthopedics">Orthopedics (Dr. Vikram Menon)</option>
+                <option value="general">General Medicine</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="apptDate">Preferred Appointment Date *</label>
+              <input type="date" id="apptDate" name="apptDate" required>
+            </div>
+
+            <div class="field">
+              <label for="apptTime">Preferred Time Slot *</label>
+              <input type="time" id="apptTime" name="apptTime" min="09:00" max="17:30" required>
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Consultation Type *</legend>
+            <div class="options-inline">
+              <label><input type="radio" name="visitType" value="in-person" checked required> In-Person Hospital Visit</label>
+              <label><input type="radio" name="visitType" value="teleconsult"> Video Teleconsultation</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="symptoms">Reason for Visit / Symptoms (Optional)</label>
+            <textarea id="symptoms" name="symptoms" rows="3" placeholder="Briefly describe your symptoms or prior medical history..."></textarea>
+          </div>
+
+          <button type="submit">Confirm Appointment</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CityCare Multi-Specialty Hospital &bull; NABH Accredited Healthcare Portal</p>
+  </footer>
+</body>
+</html>
